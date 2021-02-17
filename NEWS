@@ -1,5 +1,12 @@
 # Releases
 
+## testing-release-tools 0.4.1 - (2021-02-17)
+
+**Bug fixes:**
+
+ * Fix bug #666
+
+
 ## testing-release-tools 0.4.0 - (2021-02-17)
 
 **New features:**
