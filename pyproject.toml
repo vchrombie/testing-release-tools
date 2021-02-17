@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "grimoirelab-release-tools"
+name = "testing-release-tools"
 version = "0.2.0"
 description = "Set of tools to generate GrimoireLab releases."
 authors = [
