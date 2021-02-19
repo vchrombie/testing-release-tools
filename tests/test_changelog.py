@@ -285,7 +285,7 @@ class TestChangelog(unittest.TestCase):
         """Check if it doesn't create the file if the content is invalid."""
 
         runner = click.testing.CliRunner(mix_stderr=False)
-        user_input = "new change\n1\ny"
+        user_input = "new change\n1\ny\nn"
 
         with runner.isolated_filesystem() as fs:
             dirpath = os.path.join(fs, 'releases', 'unreleased')
