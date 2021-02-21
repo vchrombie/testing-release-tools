@@ -285,6 +285,8 @@ class TestChangelog(unittest.TestCase):
         """Check if it doesn't create the file if the content is invalid."""
 
         runner = click.testing.CliRunner(mix_stderr=False)
+
+        # 'n' means the user refuses to edit the entry when there is an error
         user_input = "new change\n1\ny\nn"
 
         with runner.isolated_filesystem() as fs:
