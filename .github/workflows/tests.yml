@@ -27,14 +27,12 @@ jobs:
         run: |
           source $HOME/.poetry/env
           poetry run flake8
-      - name: Tests and 
+      - name: Tests and Coveralls
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           source $HOME/.poetry/env
           cd tests
           poetry run coverage run --source=release_tools run_tests.py
-          poetry run coverage report -m        
-      - name: Coveralls
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
+          poetry run coverage report -m      
           poetry run coveralls --service=github
