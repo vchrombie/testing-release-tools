@@ -31,6 +31,7 @@ jobs:
           source $HOME/.poetry/env
           cd tests
           poetry run coverage run --source=release_tools run_tests.py
+          poetry run coverage xml
       - name: Send coverage report to codecov
         uses: codecov/codecov-action@v1
 #         with:
