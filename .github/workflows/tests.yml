@@ -33,5 +33,9 @@ jobs:
           poetry run coverage run --source=release_tools run_tests.py
       - name: Send coverage report to codecov
         uses: codecov/codecov-action@v1
-        with:
-          file: ./coverage.xml
+#         with:
+#           flags: unittests # optional
+#           name: codecov-umbrella # optional
+#           fail_ci_if_error: true # optional (default = false)
+#           verbose: true
+#           file: ./coverage.xml
